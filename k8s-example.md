@@ -7,6 +7,8 @@ kubectl apply -f https://ghproxy.com/https://raw.githubusercontent.com/lyzhang19
 
 kubectl wait --for=condition=Ready pods --all -n example
 
+kubectl patch hpa backend -p '{"spec":{"minReplicas": 3}}' -n example
+
 
 ## 苹果启用root
 
