@@ -9,6 +9,10 @@ kubectl wait --for=condition=Ready pods --all -n example
 
 kubectl patch hpa backend -p '{"spec":{"minReplicas": 3}}' -n example
 
+### windows下patch命令
+kubectl patch hpa backend -p '{"""spec""":{"""minReplicas""": 3}}' -n example
+
+
 
 ## 苹果启用root
 
